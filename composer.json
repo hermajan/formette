@@ -1,0 +1,30 @@
+{
+	"name": "hermajan/formette",
+	"description": "Nette Forms extensions.",
+	"type": "library",
+	"homepage": "https://hermajan.net/formette",
+	"support": {
+		"issues": "https://github.com/hermajan/formette/issues"
+	},
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Formette\\": "src"
+		}
+	},
+	"config": {
+		"sort-packages": true,
+		"optimize-autoloader": true
+	},
+	"require": {
+		"php": ">=7.3",
+		"nette/forms": "^3.0"
+	},
+	"require-dev": {
+		"nette/tester": "^2.0",
+		"nette/utils": "^3.0",
+		"phpstan/phpstan": "^1.7",
+		"phpstan/phpstan-nette": "^1.0",
+		"tracy/tracy": "^2.5"
+	}
+}
