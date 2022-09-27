@@ -16,6 +16,14 @@
 		"sort-packages": true,
 		"optimize-autoloader": true
 	},
+	"scripts": {
+		"phpstan": [
+			"vendor/bin/phpstan analyse src -c tests/phpstan.neon"
+		],
+		"tester": [
+			"php ./vendor/nette/tester/src/tester.php -C -s tests"
+		]
+	},
 	"require": {
 		"php": ">=7.3",
 		"nette/forms": "^3.0"

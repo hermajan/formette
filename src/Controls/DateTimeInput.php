@@ -6,8 +6,10 @@ use Nette\InvalidArgumentException;
 use Nette\Utils\Html;
 
 class DateTimeInput extends TextInput {
+	/** @var string */
 	protected $datetimeFormat = "Y-m-d H:i:s";
 	
+	/** @var string */
 	protected $type = "datetime-local";
 	
 	public function setValue($value) {
@@ -33,6 +35,6 @@ class DateTimeInput extends TextInput {
 	}
 	
 	protected function getRenderedValue(): ?string {
-		return empty($this->rawValue) ? $this->emptyValue : $this->rawValue->format($this->datetimeFormat);
+		return $this->rawValue instanceof \DateTimeInterface ? $this->rawValue->format($this->datetimeFormat) : $this->emptyValue;
 	}
 }
